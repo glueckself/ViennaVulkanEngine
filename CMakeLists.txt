@@ -22,7 +22,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-D IMGUI_IMPL_VULKAN_NO_PROTOTYPES)
 	add_compile_options(-Wno-nullability-completeness)
-	add_compile_options(-D_CRT_SECURE_NO_WARNINGS) #for assimp
+	add_compile_options(-D_CRT_SECURE_NO_WARNINGS -DNDEBUG) #for assimp
 endif()
 
 
