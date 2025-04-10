@@ -1,0 +1,22 @@
+diff --git a/include/VECSRegistry.h b/include/VECSRegistry.h
+index 7305c0b..f1e71ab 100644
+--- a/include/VECSRegistry.h
++++ b/include/VECSRegistry.h
+@@ -77,7 +77,7 @@ namespace vecs {
+ 				auto index = m_slot->m_value.m_index;
+ 				if( !m_slot || m_slot->m_version != m_handle.GetVersion() || ( arch != m_archetype && !arch->Has(Type<T>()) )  ) {
+ 					if( !arch->Has(Type<T>()) ) {
+-						std::cout << "Reference to type " << typeid(std::declval<T>()).name() << " invalidated because of adding or erasing a component or erasing an entity!" << std::endl;
++						std::cout << "Reference to type dtrn invalidated because of adding or erasing a component or erasing an entity!" << std::endl;
+ 						assert(false);
+ 						exit(-1);
+ 					}
+@@ -118,7 +118,7 @@ namespace vecs {
+ 				auto arch = m_slot->m_value.m_arch;
+ 				auto index = m_slot->m_value.m_index;
+ 				if( !m_slot || m_slot->m_version != m_handle.GetVersion() || ( arch != m_archetype && !arch->Has(Type<T>()) ) ) {
+-					std::cout << "Reference to type " << typeid(std::declval<T>()).name() << " invalidated because of adding or erasing a component or erasing an entity!" << std::endl;
++					std::cout << "Reference to type uiaeuiae invalidated because of adding or erasing a component or erasing an entity!" << std::endl;
+ 					assert(false);
+ 					exit(-1);
+ 				}

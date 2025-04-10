@@ -1,0 +1,25 @@
+commit b9d47aab053dd5776e0905eedc9e4c52592627fd
+Merge: 06933dab d7a222bc
+Author: Milenko Dukic <mildukic97@gmail.com>
+Date:   Wed Apr 9 15:35:35 2025 +0200
+
+    linux-specific patches
+
+diff --cc include/VHInclude.h
+index 23276795,b2533df4..6feed095
+--- a/include/VHInclude.h
++++ b/include/VHInclude.h
+@@@ -65,11 -65,9 +65,11 @@@ namespace vve 
+  #include <stb_image.h>
+  #include <stb_image_write.h>
+  
+ -#include <volk.h>
+ +#include "volk.h"
+ +
+ +#include <VkBootstrap.h>
+  
+- #include "vma/vk_mem_alloc.h"
++ #include <vk_mem_alloc.h>
+  
+  #include "imgui.h"
+  #include "backends/imgui_impl_sdl2.h"

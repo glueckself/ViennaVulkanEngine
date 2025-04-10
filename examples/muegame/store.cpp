@@ -11,7 +11,6 @@ extern "C" {
 
 // Function to encode and save frames to a video file
 void encodeAndSaveFrames(const std::vector<AVFrame*>& frames, const std::string& filename, int width, int height, int fps) {
-    avcodec_register_all();
     avformat_network_init();
 
     const AVCodec* codec = avcodec_find_encoder(AV_CODEC_ID_H264);

@@ -24,7 +24,7 @@ class MyGame : public vve::System {
 public:
     MyGame(vve::Engine& engine) : vve::System("MyGame", engine) {
 
-        m_engine.RegisterCallback({
+        m_engine.RegisterCallbacks({
             {this, 0, "LOAD_LEVEL", [this](Message& message) { return OnLoadLevel(message); }},
             {this, 10000, "UPDATE", [this](Message& message) { return OnUpdate(message); }},
             {this, -10000, "RECORD_NEXT_FRAME", [this](Message& message) { return OnRecordNextFrame(message); }}
@@ -52,7 +52,7 @@ public:
         std::cout << "Loading level: " << msg.m_level << std::endl;
         std::string level = std::string("Level: ") + msg.m_level;
 
-        m_engine.SendMessage(MsgSceneLoad{ this, nullptr, vve::Name{plane_obj}, aiProcess_FlipWindingOrder });
+        m_engine.SendMsg(MsgSceneLoad{ vve::Filename{plane_obj}, aiProcess_FlipWindingOrder });
 
         auto m_handlePlane = m_registry.Insert(
             vve::Position{ {0.0f, 0.0f, 0.0f} },
@@ -63,7 +63,7 @@ public:
             vve::UVScale{ {1000.0f, 1000.0f} }
         );
 
-        m_engine.SendMessage(MsgObjectCreate{ this, nullptr, vve::ObjectHandle(m_handlePlane), vve::ParentHandle{} });
+        m_engine.SendMsg(MsgObjectCreate{ vve::ObjectHandle(m_handlePlane), vve::ParentHandle{} });
 
         for (int i = 0; i < c_number_obstacles; ++i) {
             vec2_t obstaclePos = vec2_t{ static_cast<float>(nextRandom()), static_cast<float>(nextRandom()) };
@@ -73,14 +73,14 @@ public:
                 vve::Scale{ vec3_t{1.0f} }
             );
 
-            m_engine.SendMessage(MsgSceneCreate{ this, nullptr, vve::ObjectHandle(handleObstacle), vve::ParentHandle{}, vve::Name{cube_obj}, aiProcess_FlipWindingOrder });
+            m_engine.SendMsg(MsgSceneCreate{ vve::ObjectHandle(handleObstacle), vve::ParentHandle{}, vve::Filename{cube_obj}, aiProcess_FlipWindingOrder });
             m_obstacles.push_back(handleObstacle);
         }
 
         GetCamera();
         m_registry.Get<vve::Rotation&>(m_cameraHandle)() = mat3_t{ glm::rotate(mat4_t{1.0f}, 3.14152f / 2.0f, vec3_t{1.0f, 0.0f, 0.0f}) };
 
-        m_engine.SendMessage(MsgPlaySound{ this, nullptr, vve::Name{"assets/sounds/ophelia.wav"}, 2 });
+        m_engine.SendMsg(MsgPlaySound{ vve::Filename{"assets/sounds/ophelia.wav"}, 2 });
 
         return false;
     };
@@ -105,7 +105,7 @@ public:
                 if (dist < 1.5f) {
                     std::cout << "Collision with obstacle!" << std::endl;
                     m_state = State::STATE_COLLISION;
-                    m_engine.SendMessage(MsgPlaySound{ this, nullptr, vve::Name{"assets/sounds/explosion.wav"}, 1 });
+                    m_engine.SendMsg(MsgPlaySound{ vve::Filename{"assets/sounds/explosion.wav"}, 1 });
                     return false;
                 }
             }
@@ -146,7 +146,7 @@ public:
             m_registry.Get<vve::Position&>(obstacle)() = {obstaclePos.x, obstaclePos.y, 0.5f};
         }
 
-        m_engine.SendMessage(MsgPlaySound{ this, nullptr, vve::Name{"assets/sounds/ophelia.wav"}, 2 });
+        m_engine.SendMsg(MsgPlaySound{ vve::Filename{"assets/sounds/ophelia.wav"}, 2 });
     }
 
     void FinalizeVideoExport() {
