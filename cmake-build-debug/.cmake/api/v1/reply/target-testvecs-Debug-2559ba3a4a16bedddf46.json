@@ -11,6 +11,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"link_directories",
 			"add_compile_options",
 			"include_directories"
 		],
@@ -37,77 +38,89 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 23,
-				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 24,
-				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 25,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 35,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 52,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 53,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 54,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
 				"line" : 66,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 74,
+				"line" : 27,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 28,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 29,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 38,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 55,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 56,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 57,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 85,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 93,
 				"parent" : 2
 			},
 			{
 				"file" : 2
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 2,
 				"line" : 29,
-				"parent" : 12
+				"parent" : 14
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 2,
 				"line" : 39,
-				"parent" : 12
+				"parent" : 14
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 2,
 				"line" : 47,
-				"parent" : 12
+				"parent" : 14
 			}
 		]
 	},
@@ -120,62 +133,66 @@
 					"fragment" : "-g -std=gnu++20 -fdiagnostics-color=always"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"fragment" : "-D"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"fragment" : "IMGUI_IMPL_VULKAN_NO_PROTOTYPES"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Wno-nullability-completeness"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"fragment" : "-D_CRT_SECURE_NO_WARNINGS"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"fragment" : "-DNDEBUG"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/include"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/include"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"path" : "/include/volk"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/include/vma"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
+					"path" : "/home/milli/Uni/Cloud_Gaming/ffmpeg_build/include"
+				},
+				{
+					"backtrace" : 12,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
 				},
 				{
-					"backtrace" : 13,
+					"backtrace" : 15,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
 				},
 				{
-					"backtrace" : 14,
+					"backtrace" : 16,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 17,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
 				}
 			],
@@ -207,6 +224,11 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-L/home/milli/Uni/Cloud_Gaming/ffmpeg_build/lib",
+				"role" : "libraryPath"
 			}
 		],
 		"language" : "CXX"

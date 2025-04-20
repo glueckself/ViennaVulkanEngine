@@ -690,70 +690,70 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2-Debug-a0afcdeb1e696937d71e.json",
+					"jsonFile" : "target-SDL2-Debug-d0921a58c6e4643ba625.json",
 					"name" : "SDL2",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2-static::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2-static-Debug-09a8e7edbc78be841ebf.json",
+					"jsonFile" : "target-SDL2-static-Debug-da778b567268a228e669.json",
 					"name" : "SDL2-static",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2_test::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2_test-Debug-462519cc4d7842711a21.json",
+					"jsonFile" : "target-SDL2_test-Debug-b2025441b99125239003.json",
 					"name" : "SDL2_test",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2main::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2main-Debug-d17908cdd49514b39ec4.json",
+					"jsonFile" : "target-SDL2main-Debug-a0a184e9e97110c83c2e.json",
 					"name" : "SDL2main",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 8,
 					"id" : "assimp::@b1ea6f5c2178ebc90389",
-					"jsonFile" : "target-assimp-Debug-df5447cb316647cdf04b.json",
+					"jsonFile" : "target-assimp-Debug-d68e3153790434c650bb.json",
 					"name" : "assimp",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "docs::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-docs-Debug-a59e56e6eb893a084699.json",
+					"jsonFile" : "target-docs-Debug-e5e9628fa87f125de3f0.json",
 					"name" : "docs",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 15,
 					"id" : "game::@c25f4c7b7d87a887bbce",
-					"jsonFile" : "target-game-Debug-87ddde8dfc1f242cb5ea.json",
+					"jsonFile" : "target-game-Debug-62d6c2587ee565d71fb2.json",
 					"name" : "game",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 10,
 					"id" : "glm::@ce54d98d7b326a3e12a8",
-					"jsonFile" : "target-glm-Debug-5c8789492cd928c6d186.json",
+					"jsonFile" : "target-glm-Debug-ca93008a0205529b70e0.json",
 					"name" : "glm",
 					"projectIndex" : 7
 				},
 				{
 					"directoryIndex" : 14,
 					"id" : "helper::@98754d11e0974747d46a",
-					"jsonFile" : "target-helper-Debug-dca613a2e7519ca8fe69.json",
+					"jsonFile" : "target-helper-Debug-f7eee003ae5f0a5c46dd.json",
 					"name" : "helper",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 16,
 					"id" : "muegame::@402c1a0e0ac2212a2b06",
-					"jsonFile" : "target-muegame-Debug-28af8a758688d9f6edee.json",
+					"jsonFile" : "target-muegame-Debug-a9bf33ec1cf9f5df8ac4.json",
 					"name" : "muegame",
 					"projectIndex" : 0
 				},
@@ -767,14 +767,14 @@
 				{
 					"directoryIndex" : 4,
 					"id" : "testvecs::@d6bac87f38bd302b6b0d",
-					"jsonFile" : "target-testvecs-Debug-1d5527e16d9675e9a2b8.json",
+					"jsonFile" : "target-testvecs-Debug-2559ba3a4a16bedddf46.json",
 					"name" : "testvecs",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 17,
 					"id" : "testvve::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-testvve-Debug-7ce367618d82ee799426.json",
+					"jsonFile" : "target-testvve-Debug-401967210b21b1c83d26.json",
 					"name" : "testvve",
 					"projectIndex" : 0
 				},
@@ -788,21 +788,21 @@
 				{
 					"directoryIndex" : 12,
 					"id" : "viennavulkanengine::@145eef247bfb46b6828c",
-					"jsonFile" : "target-viennavulkanengine-Debug-787b9476a3913a6a79dd.json",
+					"jsonFile" : "target-viennavulkanengine-Debug-5712da317de101efe4b4.json",
 					"name" : "viennavulkanengine",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 11,
 					"id" : "vk-bootstrap::@74233fd7f31b35e18d8e",
-					"jsonFile" : "target-vk-bootstrap-Debug-5fdd924fa078cc71a418.json",
+					"jsonFile" : "target-vk-bootstrap-Debug-74f99978ca412b6dd99a.json",
 					"name" : "vk-bootstrap",
 					"projectIndex" : 8
 				},
 				{
 					"directoryIndex" : 7,
 					"id" : "zlibstatic::@7fd99959cf8fe87d223a",
-					"jsonFile" : "target-zlibstatic-Debug-af29a6c396ecbb16008d.json",
+					"jsonFile" : "target-zlibstatic-Debug-e80ab193559e886d632e.json",
 					"name" : "zlibstatic",
 					"projectIndex" : 6
 				}

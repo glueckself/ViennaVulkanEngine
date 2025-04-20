@@ -8,7 +8,6 @@ set(SOURCE
   ${imgui_SOURCE_DIR}/backends/imgui_impl_vulkan.cpp
   ${imgui_SOURCE_DIR}/imgui_tables.cpp
   ${imgui_SOURCE_DIR}/imgui_widgets.cpp
-
   VEEngine.cpp
   VEGUI.cpp
   VERenderer.cpp
@@ -30,7 +29,7 @@ set(SOURCE
   VHRender.cpp
   VHCommand.cpp
   VHSync.cpp
-  )
+)
 
 set(HEADERS
   ${INCLUDE}/VEInclude.h
@@ -54,12 +53,11 @@ set(HEADERS
   ${INCLUDE}/VHVulkan.h
   ${INCLUDE}/VHDevice.h
   ${INCLUDE}/VHRender.h
-  ${INCLUDE}/VHRender.h
   ${INCLUDE}/VHCommand.h
   ${INCLUDE}/VHSync.h
 )
 
-add_library (${TARGET} STATIC ${SOURCE} ${HEADERS})
+add_library(${TARGET} STATIC ${SOURCE} ${HEADERS})
 
 target_compile_features(${TARGET} PUBLIC cxx_std_20)
 
@@ -68,5 +66,5 @@ source_group(
   PREFIX "Header Files"
   FILES ${HEADER_LIST})
 
-target_link_libraries(${TARGET} SDL2 assimp vk-bootstrap volk)
+target_link_libraries(${TARGET} SDL2 assimp vk-bootstrap volk ${FFMPEG_LIBS})
 

@@ -3451,7 +3451,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Enables UPDATE_DISCONNECTED behavior just for population of Imgui"
+					"value" : "Enables UPDATE_DISCONNECTED behavior just for population of imgui"
 				}
 			],
 			"type" : "BOOL",
@@ -15283,7 +15283,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "general;SDL2;general;assimp;general;vk-bootstrap;general;volk;"
+			"value" : "general;SDL2;general;assimp;general;vk-bootstrap;general;volk;general;avcodec;general;avformat;general;avutil;general;swscale;"
 		},
 		{
 			"name" : "zlib_BINARY_DIR",

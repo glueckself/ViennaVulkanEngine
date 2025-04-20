@@ -62,19 +62,19 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 23,
+				"line" : 27,
 				"parent" : 4
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 24,
+				"line" : 28,
 				"parent" : 4
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 25,
+				"line" : 29,
 				"parent" : 4
 			},
 			{
@@ -167,43 +167,31 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 35,
+				"line" : 38,
 				"parent" : 4
 			},
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 52,
+				"line" : 55,
 				"parent" : 4
 			},
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 53,
+				"line" : 56,
 				"parent" : 4
 			},
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 54,
+				"line" : 57,
 				"parent" : 4
 			},
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 66,
-				"parent" : 4
-			},
-			{
-				"command" : 11,
-				"file" : 1,
-				"line" : 74,
-				"parent" : 4
-			},
-			{
-				"command" : 11,
-				"file" : 1,
-				"line" : 84,
+				"line" : 65,
 				"parent" : 4
 			},
 			{
@@ -215,13 +203,31 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 86,
+				"line" : 93,
 				"parent" : 4
 			},
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 95,
+				"line" : 103,
+				"parent" : 4
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 104,
+				"parent" : 4
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 105,
+				"parent" : 4
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 113,
 				"parent" : 4
 			},
 			{
@@ -321,7 +327,7 @@
 					"fragment" : "-DNDEBUG"
 				},
 				{
-					"backtrace" : 43,
+					"backtrace" : 44,
 					"fragment" : "-Wno-dangling-reference"
 				},
 				{
@@ -424,70 +430,74 @@
 				},
 				{
 					"backtrace" : 27,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ffmpeg_build/include"
 				},
 				{
 					"backtrace" : 28,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
 				},
 				{
 					"backtrace" : 29,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
 				},
 				{
 					"backtrace" : 30,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
 				},
 				{
 					"backtrace" : 31,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
 				},
 				{
 					"backtrace" : 32,
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+				},
+				{
+					"backtrace" : 33,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-src/include"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/contrib/zlib"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/contrib/zlib"
 				},
 				{
-					"backtrace" : 34,
+					"backtrace" : 35,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/pugixml/src"
 				},
 				{
-					"backtrace" : 35,
+					"backtrace" : 36,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/utf8cpp/source"
 				},
 				{
-					"backtrace" : 36,
+					"backtrace" : 37,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/rapidjson/include"
 				},
 				{
-					"backtrace" : 37,
+					"backtrace" : 38,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib"
 				},
 				{
-					"backtrace" : 38,
+					"backtrace" : 39,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/unzip"
 				},
 				{
-					"backtrace" : 39,
+					"backtrace" : 40,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/openddlparser/include"
 				},
 				{
-					"backtrace" : 40,
+					"backtrace" : 41,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../include"
 				},
 				{
-					"backtrace" : 40,
+					"backtrace" : 41,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/code/../include"
 				},
 				{
-					"backtrace" : 41,
+					"backtrace" : 42,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/.."
 				}
 			],
@@ -756,7 +766,7 @@
 					"fragment" : "-DNDEBUG"
 				},
 				{
-					"backtrace" : 43,
+					"backtrace" : 44,
 					"fragment" : "-Wno-dangling-reference"
 				},
 				{
@@ -862,70 +872,74 @@
 				},
 				{
 					"backtrace" : 27,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ffmpeg_build/include"
 				},
 				{
 					"backtrace" : 28,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
 				},
 				{
 					"backtrace" : 29,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
 				},
 				{
 					"backtrace" : 30,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
 				},
 				{
 					"backtrace" : 31,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
 				},
 				{
 					"backtrace" : 32,
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+				},
+				{
+					"backtrace" : 33,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-src/include"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/contrib/zlib"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/contrib/zlib"
 				},
 				{
-					"backtrace" : 34,
+					"backtrace" : 35,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/pugixml/src"
 				},
 				{
-					"backtrace" : 35,
+					"backtrace" : 36,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/utf8cpp/source"
 				},
 				{
-					"backtrace" : 36,
+					"backtrace" : 37,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/rapidjson/include"
 				},
 				{
-					"backtrace" : 37,
+					"backtrace" : 38,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib"
 				},
 				{
-					"backtrace" : 38,
+					"backtrace" : 39,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/unzip"
 				},
 				{
-					"backtrace" : 39,
+					"backtrace" : 40,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/openddlparser/include"
 				},
 				{
-					"backtrace" : 40,
+					"backtrace" : 41,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../include"
 				},
 				{
-					"backtrace" : 40,
+					"backtrace" : 41,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/code/../include"
 				},
 				{
-					"backtrace" : 41,
+					"backtrace" : 42,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/.."
 				}
 			],
@@ -1069,70 +1083,74 @@
 				},
 				{
 					"backtrace" : 27,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ffmpeg_build/include"
 				},
 				{
 					"backtrace" : 28,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
 				},
 				{
 					"backtrace" : 29,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
 				},
 				{
 					"backtrace" : 30,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
 				},
 				{
 					"backtrace" : 31,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
 				},
 				{
 					"backtrace" : 32,
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+				},
+				{
+					"backtrace" : 33,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-src/include"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/contrib/zlib"
 				},
 				{
-					"backtrace" : 33,
+					"backtrace" : 34,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/contrib/zlib"
 				},
 				{
-					"backtrace" : 34,
+					"backtrace" : 35,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/pugixml/src"
 				},
 				{
-					"backtrace" : 35,
+					"backtrace" : 36,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/utf8cpp/source"
 				},
 				{
-					"backtrace" : 36,
+					"backtrace" : 37,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/rapidjson/include"
 				},
 				{
-					"backtrace" : 37,
+					"backtrace" : 38,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib"
 				},
 				{
-					"backtrace" : 38,
+					"backtrace" : 39,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/unzip"
 				},
 				{
-					"backtrace" : 39,
+					"backtrace" : 40,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../contrib/openddlparser/include"
 				},
 				{
-					"backtrace" : 40,
+					"backtrace" : 41,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/../include"
 				},
 				{
-					"backtrace" : 40,
+					"backtrace" : 41,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/code/../include"
 				},
 				{
-					"backtrace" : 41,
+					"backtrace" : 42,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/code/.."
 				}
 			],
@@ -1141,7 +1159,7 @@
 			{
 				"backtraces" : 
 				[
-					42
+					43
 				],
 				"standard" : "99"
 			},

@@ -38,61 +38,49 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 23,
+				"line" : 27,
 				"parent" : 2
 			},
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 24,
+				"line" : 28,
 				"parent" : 2
 			},
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 25,
+				"line" : 29,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 35,
+				"line" : 38,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 52,
+				"line" : 55,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 53,
+				"line" : 56,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 54,
+				"line" : 57,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 66,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 74,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 84,
+				"line" : 65,
 				"parent" : 2
 			},
 			{
@@ -104,13 +92,31 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 86,
+				"line" : 93,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 95,
+				"line" : 103,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 104,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 113,
 				"parent" : 2
 			},
 			{
@@ -122,13 +128,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 136,
+				"line" : 134,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 137,
+				"line" : 135,
 				"parent" : 2
 			},
 			{
@@ -188,42 +194,46 @@
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ffmpeg_build/include"
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
 				},
 				{
 					"backtrace" : 14,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
 				},
 				{
 					"backtrace" : 15,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
 				},
 				{
 					"backtrace" : 16,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-src/include"
 				},
 				{
 					"backtrace" : 17,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/imgui-src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src/include"
 				},
 				{
 					"backtrace" : 18,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/imgui-src/backends"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/imgui-src"
 				},
 				{
 					"backtrace" : 19,
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/imgui-src/backends"
+				},
+				{
+					"backtrace" : 20,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/glm-src"
 				}
 			],

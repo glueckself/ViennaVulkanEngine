@@ -518,7 +518,7 @@ FETCHCONTENT_UPDATES_DISCONNECTED_ASSIMP:BOOL=OFF
 //Enables UPDATE_DISCONNECTED behavior just for population of glm
 FETCHCONTENT_UPDATES_DISCONNECTED_GLM:BOOL=OFF
 
-//Enables UPDATE_DISCONNECTED behavior just for population of Imgui
+//Enables UPDATE_DISCONNECTED behavior just for population of imgui
 FETCHCONTENT_UPDATES_DISCONNECTED_IMGUI:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of l2dfiledialog
@@ -1273,7 +1273,7 @@ pkgcfg_lib_PKG_WAYLAND_wayland-egl:FILEPATH=/usr/lib/x86_64-linux-gnu/libwayland
 pkgcfg_lib_PKG_WAYLAND_xkbcommon:FILEPATH=/usr/lib/x86_64-linux-gnu/libxkbcommon.so
 
 //Dependencies for the target
-viennavulkanengine_LIB_DEPENDS:STATIC=general;SDL2;general;assimp;general;vk-bootstrap;general;volk;
+viennavulkanengine_LIB_DEPENDS:STATIC=general;SDL2;general;assimp;general;vk-bootstrap;general;volk;general;avcodec;general;avformat;general;avutil;general;swscale;
 
 //Value Computed by CMake
 zlib_BINARY_DIR:STATIC=/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-build/contrib/zlib

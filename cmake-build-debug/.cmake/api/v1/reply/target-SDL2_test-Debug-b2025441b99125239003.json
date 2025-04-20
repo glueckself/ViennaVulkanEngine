@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/sdl2-build/libSDL2_test.a"
+			"path" : "_deps/sdl2-build/libSDL2_testd.a"
 		}
 	],
 	"backtrace" : 1,
@@ -45,61 +45,49 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 23,
+				"line" : 27,
 				"parent" : 3
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 24,
+				"line" : 28,
 				"parent" : 3
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 25,
+				"line" : 29,
 				"parent" : 3
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 35,
+				"line" : 38,
 				"parent" : 3
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 52,
+				"line" : 55,
 				"parent" : 3
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 53,
+				"line" : 56,
 				"parent" : 3
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 54,
+				"line" : 57,
 				"parent" : 3
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 66,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 74,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 84,
+				"line" : 65,
 				"parent" : 3
 			},
 			{
@@ -111,7 +99,25 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 86,
+				"line" : 93,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 103,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 104,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 105,
 				"parent" : 3
 			},
 			{
@@ -171,34 +177,38 @@
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ffmpeg_build/include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/stb_image-src"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/l2dfiledialog-src/L2DFileDialog/src"
 				},
 				{
 					"backtrace" : 14,
-					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennaentitycomponentsystem-src/include"
 				},
 				{
 					"backtrace" : 15,
+					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src/include"
+				},
+				{
+					"backtrace" : 16,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennatypelistlibrary-src/include"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 17,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-build/include"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 17,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-build/include/SDL2"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 17,
 					"path" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-build/include-config-debug/SDL2"
 				}
 			],
@@ -233,7 +243,7 @@
 	],
 	"id" : "SDL2_test::@45bd952f1071c035638d",
 	"name" : "SDL2_test",
-	"nameOnDisk" : "libSDL2_test.a",
+	"nameOnDisk" : "libSDL2_testd.a",
 	"paths" : 
 	{
 		"build" : "_deps/sdl2-build",
