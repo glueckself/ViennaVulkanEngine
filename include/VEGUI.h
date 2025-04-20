@@ -33,8 +33,8 @@ namespace vve {
 		int m_y = -1;
 		vecs::Handle m_cameraHandle{};
 		vecs::Handle m_cameraNodeHandle{};
-		bool m_makeScreenshot{false};
-		int m_numScreenshot{0};
+		bool m_makeScreenshot{true};
+		int m_numScreenshot{1};
 		bool m_makeScreenshotDepth{false};
 
 	};

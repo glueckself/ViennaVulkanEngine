@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/viennatypelistlibrary-build",
+		"source" : "cmake-build-debug/_deps/viennatypelistlibrary-src"
+	}
+}

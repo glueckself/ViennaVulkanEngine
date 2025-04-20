@@ -1,0 +1,15 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=git
+command=/snap/clion/338/bin/cmake/linux/x64/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-subbuild/viennastrongtype-populate-prefix/tmp/viennastrongtype-populate-gitclone.cmake
+source_dir=/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/viennastrongtype-src
+work_dir=/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps
+repository=https://github.com/hlavacs/ViennaStrongType.git
+remote=origin
+init_submodules=TRUE
+recurse_submodules=--recursive
+submodules=
+CMP0097=NEW
+      

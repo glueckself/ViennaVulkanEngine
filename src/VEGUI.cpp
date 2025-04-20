@@ -184,8 +184,6 @@ namespace vve {
 			std::string name("screenshots/screenshot" + std::to_string(m_numScreenshot - 1) + ".jpg");
 			stbi_write_jpg(name.c_str(), extent.width, extent.height, 4, dataImage, 4 * extent.width);
 			delete[] dataImage;
-
-			m_makeScreenshot = false;
 		}
 
 		/*

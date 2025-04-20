@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/viennastrongtype-build",
+		"source" : "cmake-build-debug/_deps/viennastrongtype-src"
+	}
+}
