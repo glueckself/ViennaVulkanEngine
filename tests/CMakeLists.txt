@@ -1,5 +1,6 @@
 set(TARGET testvve)
-set(SOURCE testvve.cpp)
+set(SOURCE testvve.cpp
+        ../include/VEFfmpegManager.h)
 
 
 

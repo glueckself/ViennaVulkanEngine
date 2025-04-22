@@ -3,6 +3,7 @@
 #include "VEInclude.h"
 #include "VESystem.h"
 #include "VECS.h"
+#include "VEFfmpegManager.h"
 
 extern "C" {
 #include <libavcodec/avcodec.h>
@@ -32,11 +33,7 @@ namespace vve {
         bool OnFrameEnd(Message message);
         void GetCamera();
 
-        // Streaming/recording related
-        void InitFFmpegEncoder(int width, int height, int fps);
-        void PushFrameToFFmpeg(uint8_t* rgbaData);
-        void FinalizeFFmpeg();
-
+        FfmpegManager m_ffmpegManager;
         std::string m_windowName;
         bool m_mouseButtonDown = false;
         bool m_shiftPressed = false;
@@ -49,15 +46,6 @@ namespace vve {
         bool m_makeScreenshotDepth{ false };
         int m_numScreenshot{ 1 };
 
-        // FFmpeg state
-        AVCodecContext* m_codecCtx = nullptr;
-        SwsContext* m_swsCtx = nullptr;
-        AVPacket* m_pkt = nullptr;
-        std::ofstream m_rawOutFile;
-        int m_frameCounter = 0;
-        int m_frameWidth = 0;
-        int m_frameHeight = 0;
-        bool m_ffmpegInitialized = false;
     };
 
 };  // namespace vve

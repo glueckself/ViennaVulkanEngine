@@ -240,6 +240,6 @@ CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:328
 -- ASSIMP SRC: /home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src
 -- FFMPEG SRC: /home/milli/Uni/Cloud_Gaming/ffmpeg_build
 -- GLM: /home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/glm-src
--- Configuring done (9.7s)
--- Generating done (0.3s)
+-- Configuring done (9.9s)
+-- Generating done (0.2s)
 -- Build files have been written to: /home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug
