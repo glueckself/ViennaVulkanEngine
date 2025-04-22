@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/testvecs.dir/testvecs.cpp.o CMakeFiles/testvecs.dir/testvecs_vecs.cpp.o -o testvecs   -L/home/milli/Uni/Cloud_Gaming/ffmpeg_build/lib 

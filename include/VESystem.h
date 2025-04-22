@@ -24,7 +24,8 @@ namespace vve {
         "RECORD_NEXT_FRAME",	// record the next frame	
         "RENDER_NEXT_FRAME",	// render the next frame
         "PRESENT_NEXT_FRAME", // present the next frame
-        "FRAME_END", //
+        "FRAME_END", //on frame end for screenshot in VEGUI
+        "FRAME_END_FFMPEG", //on frame end for stream in FfmpefManager
 		//---------------------
         "SDL", // 
         "SDL_MOUSE_MOVE", //
@@ -84,6 +85,8 @@ namespace vve {
 	    struct MsgRecordNextFrame : public MsgBase { MsgRecordNextFrame(double dt ); };
 	    struct MsgPresentNextFrame : public MsgBase { MsgPresentNextFrame(double dt);  };
 	    struct MsgFrameEnd : public MsgBase { MsgFrameEnd(double dt); };
+        struct MsgFrameEndFFMPEG : public MsgBase { MsgFrameEndFFMPEG(double dt); };
+
 	    
 		//------------------------------------------------------------------------------------------------
 

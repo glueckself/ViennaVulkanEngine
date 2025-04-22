@@ -1,6 +1,5 @@
 set(TARGET muegame)
-set(SOURCE game.cpp store.cpp)
-set(HEADERS store.h)
+set(SOURCE game.cpp)
 
 add_executable(${TARGET} ${SOURCE} ${HEADERS})
 

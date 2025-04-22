@@ -188,34 +188,6 @@ namespace vve {
             stbi_write_jpg(name.c_str(), extent.width, extent.height, 4, dataImage, 4 * extent.width);
             delete[] dataImage;
         }
-        if (m_enableStreaming) {
-            //std::cout << "[GUI] Screenshot / Frame capture triggered." << std::endl;
-            auto vstate = std::get<1>(Renderer::GetState(m_registry));
-            auto wstate = std::get<1>(Window::GetState(m_registry, m_windowName));
-
-            VkExtent2D extent = { (uint32_t)wstate().m_width, (uint32_t)wstate().m_height };
-            uint32_t imageSize = extent.width * extent.height * 4;
-            VkImage image = vstate().m_swapChain.m_swapChainImages[vstate().m_imageIndex];
-
-            uint8_t* dataImage = new uint8_t[imageSize];
-
-            vh::ImgCopyImageToHost(
-                    vstate().m_device, vstate().m_vmaAllocator, vstate().m_graphicsQueue,
-                    vstate().m_commandPool, image, VK_FORMAT_R8G8B8A8_UNORM,
-                    VK_IMAGE_ASPECT_COLOR_BIT, VK_IMAGE_LAYOUT_PRESENT_SRC_KHR,
-                    dataImage, extent.width, extent.height, imageSize, 2, 1, 0, 3
-            );
-
-            if (!m_ffmpegManager.isInitialized()) {
-                std::cout << "[GUI] Initializing FFmpeg..." << std::endl;
-                m_ffmpegManager.InitFFmpegEncoder(extent.width, extent.height, 30);
-
-            }
-
-            m_ffmpegManager.PushFrameToFFmpeg(dataImage);
-
-            delete[] dataImage;
-		}
 
 		/*
 		if (m_makeScreenshotDepth) {

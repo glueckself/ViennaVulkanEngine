@@ -83,6 +83,10 @@ namespace vve {
 		RegisterSystem(std::make_unique<GUI>(m_guiName, *this, m_windowName));
 	}
 
+    void Engine::CreateFfmpegManager() {
+        RegisterSystem(std::make_unique<FfmpegManager>(m_ffmpegName, *this, m_windowName));
+    }
+
 	void Engine::Run(){
 		m_running = true;
 		Init();
@@ -95,7 +99,8 @@ namespace vve {
 			CreateWindows();
 			CreateRenderer();
 			CreateSystems();
-			CreateGUI();		
+			CreateGUI();
+            CreateFfmpegManager();
 			SendMsg( MsgInit{} );
 			SendMsg( MsgLoadLevel{""} );
 		}

@@ -1,0 +1,3 @@
+/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/assimp-subbuild/CMakeFiles/assimp-populate.dir
+/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/assimp-subbuild/CMakeFiles/edit_cache.dir
+/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/assimp-subbuild/CMakeFiles/rebuild_cache.dir

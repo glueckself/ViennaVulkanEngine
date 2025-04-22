@@ -28,6 +28,7 @@ namespace vve {
     System::MsgRecordNextFrame::MsgRecordNextFrame(double dt): MsgBase{"RECORD_NEXT_FRAME", dt} {}; 
     System::MsgPresentNextFrame::MsgPresentNextFrame(double dt): MsgBase{"PRESENT_NEXT_FRAME", dt} {}; 
     System::MsgFrameEnd:: MsgFrameEnd(double dt): MsgBase{"FRAME_END", dt} {};
+    System::MsgFrameEndFFMPEG:: MsgFrameEndFFMPEG(double dt): MsgBase{"FRAME_END_FFMPEG", dt} {};
     
 	//------------------------------------------------------------------------
 

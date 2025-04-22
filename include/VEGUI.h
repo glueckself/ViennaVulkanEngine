@@ -3,14 +3,6 @@
 #include "VEInclude.h"
 #include "VESystem.h"
 #include "VECS.h"
-#include "VEFfmpegManager.h"
-
-extern "C" {
-#include <libavcodec/avcodec.h>
-#include <libavutil/imgutils.h>
-#include <libavutil/opt.h>
-#include <libswscale/swscale.h>
-}
 
 #include <fstream>
 
@@ -33,7 +25,6 @@ namespace vve {
         bool OnFrameEnd(Message message);
         void GetCamera();
 
-        FfmpegManager m_ffmpegManager;
         std::string m_windowName;
         bool m_mouseButtonDown = false;
         bool m_shiftPressed = false;
@@ -42,7 +33,6 @@ namespace vve {
         vecs::Handle m_cameraHandle{};
         vecs::Handle m_cameraNodeHandle{};
         bool m_makeScreenshot{ false };
-        bool m_enableStreaming{ true };
         bool m_makeScreenshotDepth{ false };
         int m_numScreenshot{ 1 };
 

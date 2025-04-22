@@ -3,7 +3,7 @@
 #include <format>
 #include "VHInclude.h"
 #include "VEInclude.h"
-#include "store.h" // include the encodeAndSaveFrames declaration
+
 
 class MyGame : public vve::System {
 
@@ -25,10 +25,10 @@ public:
     MyGame(vve::Engine& engine) : vve::System("MyGame", engine) {
 
         m_engine.RegisterCallbacks({
-            {this, 0, "LOAD_LEVEL", [this](Message& message) { return OnLoadLevel(message); }},
-            {this, 10000, "UPDATE", [this](Message& message) { return OnUpdate(message); }},
-            {this, -10000, "RECORD_NEXT_FRAME", [this](Message& message) { return OnRecordNextFrame(message); }}
-        });
+                                           {this, 0, "LOAD_LEVEL", [this](Message& message) { return OnLoadLevel(message); }},
+                                           {this, 10000, "UPDATE", [this](Message& message) { return OnUpdate(message); }},
+                                           {this, -10000, "RECORD_NEXT_FRAME", [this](Message& message) { return OnRecordNextFrame(message); }}
+                                   });
     };
 
     ~MyGame() {};
@@ -55,12 +55,12 @@ public:
         m_engine.SendMsg(MsgSceneLoad{ vve::Filename{plane_obj}, aiProcess_FlipWindingOrder });
 
         auto m_handlePlane = m_registry.Insert(
-            vve::Position{ {0.0f, 0.0f, 0.0f} },
-            vve::Rotation{ mat3_t { glm::rotate(glm::mat4(1.0f), 3.14152f / 2.0f, glm::vec3(1.0f, 0.0f, 0.0f)) } },
-            vve::Scale{ vec3_t{1000.0f, 1000.0f, 1000.0f} },
-            vve::MeshName{ plane_mesh },
-            vve::TextureName{ plane_txt },
-            vve::UVScale{ {1000.0f, 1000.0f} }
+                vve::Position{ {0.0f, 0.0f, 0.0f} },
+                vve::Rotation{ mat3_t { glm::rotate(glm::mat4(1.0f), 3.14152f / 2.0f, glm::vec3(1.0f, 0.0f, 0.0f)) } },
+                vve::Scale{ vec3_t{1000.0f, 1000.0f, 1000.0f} },
+                vve::MeshName{ plane_mesh },
+                vve::TextureName{ plane_txt },
+                vve::UVScale{ {1000.0f, 1000.0f} }
         );
 
         m_engine.SendMsg(MsgObjectCreate{ vve::ObjectHandle(m_handlePlane), vve::ParentHandle{} });
@@ -68,9 +68,9 @@ public:
         for (int i = 0; i < c_number_obstacles; ++i) {
             vec2_t obstaclePos = vec2_t{ static_cast<float>(nextRandom()), static_cast<float>(nextRandom()) };
             auto handleObstacle = m_registry.Insert(
-                vve::Position{ {obstaclePos.x, obstaclePos.y, 0.5f} },
-                vve::Rotation{ mat3_t{1.0f} },
-                vve::Scale{ vec3_t{1.0f} }
+                    vve::Position{ {obstaclePos.x, obstaclePos.y, 0.5f} },
+                    vve::Rotation{ mat3_t{1.0f} },
+                    vve::Scale{ vec3_t{1.0f} }
             );
 
             m_engine.SendMsg(MsgSceneCreate{ vve::ObjectHandle(handleObstacle), vve::ParentHandle{}, vve::Filename{cube_obj}, aiProcess_FlipWindingOrder });
@@ -88,6 +88,10 @@ public:
     bool OnUpdate(Message& message) {
         auto msg = message.template GetData<vve::System::MsgUpdate>();
         m_time_elapsed += msg.m_dt;
+
+        // Send FRAME_END each update
+        m_engine.SendMsg(MsgFrameEndFFMPEG{msg.m_dt});
+
         auto posCameraRef = m_registry.Get<vve::Position&>(m_cameraNodeHandle);
         auto& posCamera = posCameraRef();
         posCamera.z = 0.5f;
@@ -149,9 +153,7 @@ public:
         m_engine.SendMsg(MsgPlaySound{ vve::Filename{"assets/sounds/ophelia.wav"}, 2 });
     }
 
-    void FinalizeVideoExport() {
-        encodeAndSaveFrames(m_videoFrames, "output.h264", m_videoWidth, m_videoHeight, m_fps);
-    }
+
 
 private:
     State m_state = State::STATE_RUNNING;

@@ -51,6 +51,7 @@ namespace vve {
    	class SceneManager;
    	class AssetManager;
 	class SoundManager;
+    class FfmpegManager;
 
 	using Name = vsty::strong_type_t<std::string, vsty::counter<>>;
 	using SystemName = vsty::strong_type_t<std::string, vsty::counter<>>;
@@ -91,3 +92,4 @@ namespace vve {
 #include "VESceneManager.h"
 #include "VEAssetManager.h"
 #include "VESoundManager.h"
+#include "VEFfmpegManager.h"

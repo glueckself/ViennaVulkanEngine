@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/CMakeFiles/l2dfiledialog-populate"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/CMakeFiles/l2dfiledialog-populate.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/CMakeFiles/l2dfiledialog-populate-complete.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-build.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-configure.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-download.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-install.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-patch.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-test.rule"
+		},
+		{
+			"file" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/build_/_deps/l2dfiledialog-subbuild/l2dfiledialog-populate-prefix/src/l2dfiledialog-populate-stamp/l2dfiledialog-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"l2dfiledialog-populate"
+		],
+		"name" : "l2dfiledialog-populate"
+	}
+}

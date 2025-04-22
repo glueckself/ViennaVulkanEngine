@@ -4,6 +4,9 @@
 #include <fstream>
 #include <sstream>
 
+#include "VEInclude.h"
+#include "VESystem.h"
+
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavutil/imgutils.h>
@@ -11,28 +14,32 @@ extern "C" {
 #include <libswscale/swscale.h>
 }
 
-class FfmpegManager {
-    public:
-        FfmpegManager();
-        ~FfmpegManager();
+namespace vve {
+    class FfmpegManager : public System {
+        public:
+            FfmpegManager(std::string systemName, Engine& engine, std::string windowName);
+            ~FfmpegManager();
 
-        void InitFFmpegEncoder(int width, int height, int fps);
-        void PushFrameToFFmpeg(uint8_t* rgbaData);
-        bool isInitialized();
+        private:
 
-    private:
+            bool OnFrameEnd(Message message);
+            void FinalizeFFmpeg();
+            void InitFFmpegEncoder(int width, int height, int fps);
+            void PushFrameToFFmpeg(uint8_t *rgbaData);
 
-        void FinalizeFFmpeg();
+            std::string m_windowName;
+            bool m_enableStreaming{ true };
 
-        // FFmpeg state
-        AVCodecContext* m_codecCtx = nullptr;
-        SwsContext* m_swsCtx = nullptr;
-        AVPacket* m_pkt = nullptr;
-        std::ofstream m_rawOutFile;
-        int m_frameCounter = 0;
-        int m_frameWidth = 0;
-        int m_frameHeight = 0;
-        bool m_ffmpegInitialized = false;
+            // FFmpeg state
+            AVCodecContext *m_codecCtx = nullptr;
+            SwsContext *m_swsCtx = nullptr;
+            AVPacket *m_pkt = nullptr;
+            std::ofstream m_rawOutFile;
+            int m_frameCounter = 0;
+            int m_frameWidth = 0;
+            int m_frameHeight = 0;
+            bool m_ffmpegInitialized = false;
 
 
+        };
 };

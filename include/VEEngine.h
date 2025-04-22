@@ -30,6 +30,7 @@ namespace vve {
 		const std::string m_rendererForwardName = "VVE Renderer Forward";
 		const std::string m_rendererImguiName = "VVE Renderer Imgui";
 		const std::string m_guiName = "VVE GUI";
+        const std::string m_ffmpegName = "VVE Ffmpeg Manager";
 
 		struct MessageCallback {
 			System* 				 	  m_system;
@@ -63,6 +64,7 @@ namespace vve {
 		virtual void CreateRenderer();
 		virtual void CreateSystems();
 		virtual void CreateGUI();
+        virtual void CreateFfmpegManager();
 
 		std::unordered_map<std::string, std::unique_ptr<System>> m_systems{};
 
