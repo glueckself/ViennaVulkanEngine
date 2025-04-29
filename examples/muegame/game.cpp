@@ -89,9 +89,6 @@ public:
         auto msg = message.template GetData<vve::System::MsgUpdate>();
         m_time_elapsed += msg.m_dt;
 
-        // Send FRAME_END each update
-        m_engine.SendMsg(MsgFrameEndFFMPEG{msg.m_dt});
-
         auto posCameraRef = m_registry.Get<vve::Position&>(m_cameraNodeHandle);
         auto& posCamera = posCameraRef();
         posCamera.z = 0.5f;

@@ -121,6 +121,7 @@ namespace vve {
 		SendMsg( MsgRenderNextFrame{dt} ) ;
 		SendMsg( MsgPresentNextFrame{dt} ) ;
 		SendMsg( MsgFrameEnd{dt} ) ;
+        SendMsg( MsgFrameEndFFMPEG{dt} );
 	}
 
 	auto Engine::GetHandle(std::string name) -> vecs::Handle { 

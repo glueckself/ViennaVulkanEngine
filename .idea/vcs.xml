@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/_deps/l2dfiledialog-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/_deps/stb_image-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/_deps/viennaentitycomponentsystem-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/_deps/viennastrongtype-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/assimp-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/glm-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/imgui-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/l2dfiledialog-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/sdl2-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/stb_image-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/viennaentitycomponentsystem-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/viennastrongtype-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/viennatypelistlibrary-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build_/_deps/vkbootstrap-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/assimp-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/glm-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/imgui-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/l2dfiledialog-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/sdl2-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/stb_image-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/viennaentitycomponentsystem-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/viennastrongtype-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/viennatypelistlibrary-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/vkbootstrap-src" vcs="Git" />
+  </component>
+</project>

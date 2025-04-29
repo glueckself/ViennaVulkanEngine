@@ -17,7 +17,6 @@ namespace vve {
     }
 
 
-
     void FfmpegManager::InitFFmpegEncoder(int width, int height, int fps) {
         std::cout << "[FFmpeg] Initializing encoder..." << std::endl;
 
@@ -53,12 +52,10 @@ namespace vve {
         m_pkt = av_packet_alloc();
         m_swsCtx = sws_getContext(width, height, AV_PIX_FMT_RGBA, width, height, AV_PIX_FMT_YUV420P, SWS_BILINEAR,
                                   nullptr, nullptr, nullptr);
-
         m_frameWidth = width;
         m_frameHeight = height;
         m_frameCounter = 0;
         m_ffmpegInitialized = true;
-
         std::cout << "[FFmpeg] Encoder initialized successfully." << std::endl;
     }
 
@@ -73,16 +70,13 @@ namespace vve {
         rgbFrame->format = AV_PIX_FMT_RGBA;
         rgbFrame->width = m_frameWidth;
         rgbFrame->height = m_frameHeight;
-        av_image_fill_arrays(rgbFrame->data, rgbFrame->linesize, rgbaData, AV_PIX_FMT_RGBA, m_frameWidth, m_frameHeight,
-                             1);
-
+        av_image_fill_arrays(rgbFrame->data, rgbFrame->linesize, rgbaData, AV_PIX_FMT_RGBA, m_frameWidth, m_frameHeight,1);
         AVFrame *yuvFrame = av_frame_alloc();
         yuvFrame->format = AV_PIX_FMT_YUV420P;
         yuvFrame->width = m_frameWidth;
         yuvFrame->height = m_frameHeight;
         av_image_alloc(yuvFrame->data, yuvFrame->linesize, m_frameWidth, m_frameHeight, AV_PIX_FMT_YUV420P, 32);
         yuvFrame->pts = m_frameCounter++;
-
         sws_scale(m_swsCtx, rgbFrame->data, rgbFrame->linesize, 0, m_frameHeight, yuvFrame->data, yuvFrame->linesize);
 
         if (avcodec_send_frame(m_codecCtx, yuvFrame) >= 0) {
@@ -91,9 +85,13 @@ namespace vve {
                     m_rawOutFile.write(reinterpret_cast<const char *>(m_pkt->data), m_pkt->size);
                 }
                 av_packet_unref(m_pkt);
+                if (!m_pkt) {
+                    std::cerr << "[FFmpeg] Warning: packet became nullptr after unref!" << std::endl;
+                    break;  // Do not continue to free or use it
+                }
+
             }
         }
-
         av_freep(&yuvFrame->data[0]);
         av_frame_free(&yuvFrame);
         av_frame_free(&rgbFrame);
@@ -101,45 +99,58 @@ namespace vve {
 
 
     void FfmpegManager::FinalizeFFmpeg() {
-        if (!m_ffmpegInitialized) return;
-
-        std::cout << "[FFmpeg] Finalizing stream..." << std::endl;
-
-        if (m_codecCtx && m_pkt) {
-            int send_ret = avcodec_send_frame(m_codecCtx, nullptr);
-            if (send_ret < 0) {
-                std::cerr << "[FFmpeg] Warning: avcodec_send_frame failed during finalization: "
-                          << send_ret << std::endl;
-            } else {
-                while (avcodec_receive_packet(m_codecCtx, m_pkt) == 0) {
-                    if (m_rawOutFile.is_open()) {
-                        m_rawOutFile.write(reinterpret_cast<const char *>(m_pkt->data), m_pkt->size);
-                    }
-                    av_packet_unref(m_pkt);
-                }
-            }
-        }
-
-        if (m_rawOutFile.is_open()) {
-            m_rawOutFile.close();
-        }
-
-        if (m_pkt) {
-            av_packet_free(&m_pkt);
+        if (!m_ffmpegInitialized) {
+            std::cout << "[FFmpeg] Not initialized, skipping finalization." << std::endl;
+            return;
         }
 
         if (m_codecCtx) {
-            avcodec_free_context(&m_codecCtx);
+            int ret = avcodec_send_frame(m_codecCtx, nullptr);
+            if (ret < 0) {
+            } else if (m_pkt) {
+                while (true) {
+                    ret = avcodec_receive_packet(m_codecCtx, m_pkt);
+                    if (ret == 0) {
+                        if (m_rawOutFile.is_open()) {
+                            m_rawOutFile.write(reinterpret_cast<const char*>(m_pkt->data), m_pkt->size);
+                        }
+                        av_packet_unref(m_pkt);
+                    } else if (ret == AVERROR_EOF || ret == AVERROR(EAGAIN)) {
+                        break;
+                    } else {
+                        std::cerr << "[FFmpeg] Error receiving packet: " << ret << std::endl;
+                        break;
+                    }
+                }
+            } else {
+                std::cerr << "[FFmpeg] ERROR: m_pkt is nullptr! Cannot receive packets." << std::endl;
+            }
+        } else {
+            std::cerr << "[FFmpeg] ERROR: m_codecCtx is nullptr! Cannot flush encoder." << std::endl;
         }
 
+        if (m_rawOutFile.is_open()) {
+            std::cout << "[FFmpeg] Closing raw output file..." << std::endl;
+            m_rawOutFile.close();
+        }
+        if (m_pkt) {
+            av_packet_free(&m_pkt);
+            m_pkt = nullptr;
+        }
+        if (m_codecCtx) {
+            avcodec_free_context(&m_codecCtx);
+            if (m_codecCtx) {
+                std::cerr << "[FFmpeg] ERROR: m_codecCtx is still valid after freeing!" << std::endl;
+            }
+        }
         if (m_swsCtx) {
             sws_freeContext(m_swsCtx);
             m_swsCtx = nullptr;
         }
-
         m_ffmpegInitialized = false;
         std::cout << "[FFmpeg] Finalization complete. Raw stream saved." << std::endl;
     }
+
 
 
     bool FfmpegManager::OnFrameEnd(Message message) {
