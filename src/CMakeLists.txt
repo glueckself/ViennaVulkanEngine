@@ -10,6 +10,8 @@ set(SOURCE
   ${imgui_SOURCE_DIR}/imgui_widgets.cpp
   VEEngine.cpp
   VEGUI.cpp
+  VEFfmpegManager.cpp
+  UDPClient.cpp
   VERenderer.cpp
   VERendererForward.cpp
   VERendererForward11.cpp
@@ -29,6 +31,7 @@ set(SOURCE
   VHRender.cpp
   VHCommand.cpp
   VHSync.cpp
+  UDPClient.cpp
 )
 
 set(HEADERS
@@ -47,6 +50,8 @@ set(HEADERS
   ${INCLUDE}/VESystem.h
   ${INCLUDE}/VEWindow.h
   ${INCLUDE}/VEWindowSDL.h
+  ${INCLUDE}/VEFfmpegManager.h
+  ${INCLUDE}/UDPClient.h
   ${INCLUDE}/VHInclude.h
   ${INCLUDE}/VHBuffer.h
   ${INCLUDE}/VHImage.h
@@ -55,7 +60,8 @@ set(HEADERS
   ${INCLUDE}/VHRender.h
   ${INCLUDE}/VHCommand.h
   ${INCLUDE}/VHSync.h
-        VEFfmpegManager.cpp
+
+
 )
 
 add_library(${TARGET} STATIC ${SOURCE} ${HEADERS})

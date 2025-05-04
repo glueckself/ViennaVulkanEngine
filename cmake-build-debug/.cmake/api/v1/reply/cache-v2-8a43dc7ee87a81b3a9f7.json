@@ -8094,6 +8094,18 @@
 			"value" : ""
 		},
 		{
+			"name" : "PIPEWIRE_0.3_LIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/libpipewire-0.3.so"
+		},
+		{
 			"name" : "PKG_CONFIG_ARGN",
 			"properties" : 
 			[
@@ -9827,7 +9839,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-I/usr/include/pipewire-0.3;-I/usr/include/spa-0.2;-D_REENTRANT"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_CFLAGS_I",
@@ -9851,7 +9863,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-D_REENTRANT"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_FOUND",
@@ -9863,10 +9875,46 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "1"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include/pipewire-0.3;/usr/include/spa-0.2"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib/x86_64-linux-gnu;-lpipewire-0.3"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_LDFLAGS_OTHER",
 			"properties" : 
 			[
 				{
@@ -9887,7 +9935,31 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "/usr/lib/x86_64-linux-gnu"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "pipewire-0.3"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_LIBS",
@@ -9947,7 +10019,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "libpipewire-0.3"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_PREFIX",
@@ -9959,7 +10031,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "/usr"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_STATIC_CFLAGS",
@@ -9971,7 +10043,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-I/usr/include/pipewire-0.3;-I/usr/include/spa-0.2;-D_REENTRANT"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_STATIC_CFLAGS_I",
@@ -9995,6 +10067,42 @@
 				}
 			],
 			"type" : "INTERNAL",
+			"value" : "-D_REENTRANT"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_STATIC_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include/pipewire-0.3;/usr/include/spa-0.2"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_STATIC_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib/x86_64-linux-gnu;-lpipewire-0.3"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_STATIC_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
 			"value" : ""
 		},
 		{
@@ -10008,6 +10116,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : ""
+		},
+		{
+			"name" : "PKG_PIPEWIRE_STATIC_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "pipewire-0.3"
+		},
+		{
+			"name" : "PKG_PIPEWIRE_STATIC_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_STATIC_LIBS",
@@ -10067,7 +10199,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "1.0.5"
 		},
 		{
 			"name" : "PKG_PIPEWIRE_libpipewire-0.3_INCLUDEDIR",
@@ -14354,6 +14486,18 @@
 			"value" : "libdecor-0"
 		},
 		{
+			"name" : "__pkg_config_arguments_PKG_PIPEWIRE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "libpipewire-0.3>=0.3.20"
+		},
+		{
 			"name" : "__pkg_config_arguments_PKG_PULSEAUDIO",
 			"properties" : 
 			[
@@ -15150,6 +15294,22 @@
 			"value" : "/usr/lib/x86_64-linux-gnu/libdecor-0.so"
 		},
 		{
+			"name" : "pkgcfg_lib_PKG_PIPEWIRE_pipewire-0.3",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/libpipewire-0.3.so"
+		},
+		{
 			"name" : "pkgcfg_lib_PKG_PULSEAUDIO_pulse",
 			"properties" : 
 			[
@@ -15271,7 +15431,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/lib"
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "viennavulkanengine_LIB_DEPENDS",

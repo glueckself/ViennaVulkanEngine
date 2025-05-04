@@ -44,9 +44,14 @@ namespace vve {
         std::ostringstream rawFilename;
         rawFilename << "stream/raw_output_" << m_codecCtx->bit_rate << ".h264";
 
-        m_rawOutFile.open(rawFilename.str(), std::ios::binary);
-        if (!m_rawOutFile.is_open()) {
-            std::cerr << "[FFmpeg] Error: Could not open raw output file: " << rawFilename.str() << std::endl;
+        if(m_streamToUDPServer) {
+            m_udpClient = new UDPClient("::1", 12345, 30);
+        }
+        else {
+            m_rawOutFile.open(rawFilename.str(), std::ios::binary);
+            if (!m_rawOutFile.is_open()) {
+                std::cerr << "[FFmpeg] Error: Could not open raw output file: " << rawFilename.str() << std::endl;
+            }
         }
 
         m_pkt = av_packet_alloc();
@@ -81,7 +86,10 @@ namespace vve {
 
         if (avcodec_send_frame(m_codecCtx, yuvFrame) >= 0) {
             while (avcodec_receive_packet(m_codecCtx, m_pkt) == 0) {
-                if (m_rawOutFile.is_open()) {
+                if(m_streamToUDPServer){
+                    //std::cout << "[UDP_Package] Width: " << m_frameWidth << " Height> " << m_frameHeight << "Package Size is: " << m_pkt->size << std::endl;
+                    m_udpClient->sendFrame(m_pkt->data, m_pkt->size);
+                } else if (m_rawOutFile.is_open()) {
                     m_rawOutFile.write(reinterpret_cast<const char *>(m_pkt->data), m_pkt->size);
                 }
                 av_packet_unref(m_pkt);
@@ -130,7 +138,6 @@ namespace vve {
         }
 
         if (m_rawOutFile.is_open()) {
-            std::cout << "[FFmpeg] Closing raw output file..." << std::endl;
             m_rawOutFile.close();
         }
         if (m_pkt) {
@@ -139,16 +146,12 @@ namespace vve {
         }
         if (m_codecCtx) {
             avcodec_free_context(&m_codecCtx);
-            if (m_codecCtx) {
-                std::cerr << "[FFmpeg] ERROR: m_codecCtx is still valid after freeing!" << std::endl;
-            }
         }
         if (m_swsCtx) {
             sws_freeContext(m_swsCtx);
             m_swsCtx = nullptr;
         }
         m_ffmpegInitialized = false;
-        std::cout << "[FFmpeg] Finalization complete. Raw stream saved." << std::endl;
     }
 
 

@@ -6,6 +6,7 @@
 
 #include "VEInclude.h"
 #include "VESystem.h"
+#include "UDPClient.h"
 
 extern "C" {
 #include <libavcodec/avcodec.h>
@@ -29,6 +30,7 @@ namespace vve {
 
             std::string m_windowName;
             bool m_enableStreaming{ true };
+            bool m_streamToUDPServer{ true };
 
             // FFmpeg state
             AVCodecContext *m_codecCtx = nullptr;
@@ -39,6 +41,9 @@ namespace vve {
             int m_frameWidth = 0;
             int m_frameHeight = 0;
             bool m_ffmpegInitialized = false;
+
+            // UDPClient
+            UDPClient *m_udpClient = nullptr;
 
 
         };

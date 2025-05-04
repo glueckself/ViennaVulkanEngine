@@ -38,7 +38,8 @@ CMake Deprecation Warning at cmake-build-debug/_deps/viennatypelistlibrary-src/C
 -- dynamic libasound -> libasound.so.2
 -- dynamic libjack -> libjack.so.0
 -- Checking for module 'libpipewire-0.3>=0.3.20'
---   Package 'libpipewire-0.3', required by 'virtual:world', not found
+--   Found libpipewire-0.3, version 1.0.5
+-- dynamic libpipewire-0.3 -> libpipewire-0.3.so.0
 -- dynamic libpulse -> libpulse.so.0
 -- Checking for module 'esound'
 --   Package 'esound', required by 'virtual:world', not found
@@ -68,7 +69,7 @@ CMake Deprecation Warning at cmake-build-debug/_deps/viennatypelistlibrary-src/C
 --   Package 'libunwind', required by 'virtual:world', not found
 --   Package 'libunwind-generic', required by 'virtual:world', not found
 -- dynamic libsamplerate -> libsamplerate.so.0
-CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:3288 (cmake_minimum_required):
+CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:3290 (cmake_minimum_required):
   Compatibility with CMake < 3.10 will be removed from a future version of
   CMake.
 
@@ -83,7 +84,7 @@ CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:328
 -- Platform: Linux-6.8.0-57-generic
 -- 64-bit:   TRUE
 -- Compiler: /usr/bin/cc
--- Revision: SDL-release-2.32.0-32-gbfab0a968
+-- Revision: SDL-release-2.32.0-45-g17e6208c1
 -- 
 -- Subsystems:
 --   Atomic:	ON
@@ -161,8 +162,8 @@ CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:328
 --   SDL_OPENGL                  (Wanted: ON): ON
 --   SDL_OPENGLES                (Wanted: ON): ON
 --   SDL_OSS                     (Wanted: ON): ON
---   SDL_PIPEWIRE                (Wanted: ON): OFF
---   SDL_PIPEWIRE_SHARED         (Wanted: ON): OFF
+--   SDL_PIPEWIRE                (Wanted: ON): ON
+--   SDL_PIPEWIRE_SHARED         (Wanted: ON): ON
 --   SDL_PTHREADS                (Wanted: ON): ON
 --   SDL_PTHREADS_SEM            (Wanted: ON): ON
 --   SDL_PULSEAUDIO              (Wanted: ON): ON
@@ -205,7 +206,7 @@ CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:328
 --  CMAKE_CXX_FLAGS_DEBUG: -g
 -- 
 --  CFLAGS:         -idirafter "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/sdl2-src/src/video/khronos" -DHAVE_LINUX_VERSION_H
---  EXTRA_CFLAGS:   -Wall -Wundef -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -Wno-unused-local-typedefs -fdiagnostics-color=always -mmmx -msse -msse2 -msse3  -isystem/usr/include -D_REENTRANT  -isystem/usr/include/libdrm
+--  EXTRA_CFLAGS:   -Wall -Wundef -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -Wno-unused-local-typedefs -fdiagnostics-color=always -mmmx -msse -msse2 -msse3  -isystem/usr/include  -isystem/usr/include/pipewire-0.3  -isystem/usr/include/spa-0.2 -D_REENTRANT  -isystem/usr/include/libdrm
 --  EXTRA_LDFLAGS: -pthread -Wl,--no-undefined
 --  EXTRA_LIBS:    m
 -- 
@@ -240,6 +241,6 @@ CMake Deprecation Warning at cmake-build-debug/_deps/sdl2-src/CMakeLists.txt:328
 -- ASSIMP SRC: /home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/assimp-src
 -- FFMPEG SRC: /home/milli/Uni/Cloud_Gaming/ffmpeg_build
 -- GLM: /home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug/_deps/glm-src
--- Configuring done (13.8s)
--- Generating done (0.2s)
+-- Configuring done (10.7s)
+-- Generating done (0.3s)
 -- Build files have been written to: /home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug

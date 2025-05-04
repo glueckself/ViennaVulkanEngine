@@ -690,28 +690,28 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2-Debug-d0921a58c6e4643ba625.json",
+					"jsonFile" : "target-SDL2-Debug-6cb43a0e0c9d00d3d070.json",
 					"name" : "SDL2",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2-static::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2-static-Debug-da778b567268a228e669.json",
+					"jsonFile" : "target-SDL2-static-Debug-5464ebafa8550b137482.json",
 					"name" : "SDL2-static",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2_test::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2_test-Debug-b2025441b99125239003.json",
+					"jsonFile" : "target-SDL2_test-Debug-95e0518865d62fcfd512.json",
 					"name" : "SDL2_test",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2main::@45bd952f1071c035638d",
-					"jsonFile" : "target-SDL2main-Debug-a0a184e9e97110c83c2e.json",
+					"jsonFile" : "target-SDL2main-Debug-d48ec63358c60944d383.json",
 					"name" : "SDL2main",
 					"projectIndex" : 4
 				},
@@ -732,7 +732,7 @@
 				{
 					"directoryIndex" : 15,
 					"id" : "game::@c25f4c7b7d87a887bbce",
-					"jsonFile" : "target-game-Debug-3b518db4231d96e6d4a8.json",
+					"jsonFile" : "target-game-Debug-aa96b1f04f531aa15dbb.json",
 					"name" : "game",
 					"projectIndex" : 0
 				},
@@ -746,21 +746,21 @@
 				{
 					"directoryIndex" : 14,
 					"id" : "helper::@98754d11e0974747d46a",
-					"jsonFile" : "target-helper-Debug-4e22e2418fed7eaa7210.json",
+					"jsonFile" : "target-helper-Debug-25aeb0a3d54ed6099df8.json",
 					"name" : "helper",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 16,
 					"id" : "muegame::@402c1a0e0ac2212a2b06",
-					"jsonFile" : "target-muegame-Debug-c566d0f24fd21e057a12.json",
+					"jsonFile" : "target-muegame-Debug-f2e29893d125fa4fef1f.json",
 					"name" : "muegame",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "sdl_headers_copy::@45bd952f1071c035638d",
-					"jsonFile" : "target-sdl_headers_copy-Debug-2bc14bd3e4ec8e3d59c9.json",
+					"jsonFile" : "target-sdl_headers_copy-Debug-6db3bc347b0ecef4b567.json",
 					"name" : "sdl_headers_copy",
 					"projectIndex" : 4
 				},
@@ -774,21 +774,21 @@
 				{
 					"directoryIndex" : 17,
 					"id" : "testvve::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-testvve-Debug-38179372bfd72392ec6f.json",
+					"jsonFile" : "target-testvve-Debug-2016c4f4ada40e0417fe.json",
 					"name" : "testvve",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "uninstall::@45bd952f1071c035638d",
-					"jsonFile" : "target-uninstall-Debug-040a5226c86f4b9f8624.json",
+					"jsonFile" : "target-uninstall-Debug-5b622295971a36851ea3.json",
 					"name" : "uninstall",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 12,
 					"id" : "viennavulkanengine::@145eef247bfb46b6828c",
-					"jsonFile" : "target-viennavulkanengine-Debug-c31a129a45b06846e653.json",
+					"jsonFile" : "target-viennavulkanengine-Debug-ed8c96b7269c47bf13fc.json",
 					"name" : "viennavulkanengine",
 					"projectIndex" : 0
 				},
