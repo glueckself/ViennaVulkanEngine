@@ -13,6 +13,7 @@ extern "C" {
 #include <libavutil/imgutils.h>
 #include <libavutil/opt.h>
 #include <libswscale/swscale.h>
+#include <libavformat/avformat.h>
 }
 
 namespace vve {
@@ -43,7 +44,8 @@ namespace vve {
             bool m_ffmpegInitialized = false;
 
             // UDPClient
-            UDPClient *m_udpClient = nullptr;
+            AVFormatContext* m_formatCtx = nullptr;
+            AVStream* m_stream = nullptr;
 
 
         };

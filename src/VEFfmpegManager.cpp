@@ -1,21 +1,19 @@
 #include "VHInclude.h"
 #include "VEInclude.h"
 
-
 namespace vve {
 
-    FfmpegManager::FfmpegManager(std::string systemName, vve::Engine &engine, std::string windowName)  :
-            System(systemName, engine), m_windowName(windowName) {
-            std::cout << "[FFmpeg] Manager created" << std::endl;
-            m_engine.RegisterCallbacks( {
-                    {this, 0, "FRAME_END_FFMPEG", [this](Message& message){ return OnFrameEnd(message); } }
-            } );
-    };
+    FfmpegManager::FfmpegManager(std::string systemName, vve::Engine &engine, std::string windowName)
+            : System(systemName, engine), m_windowName(windowName) {
+        std::cout << "[FFmpeg] Manager created" << std::endl;
+        m_engine.RegisterCallbacks({
+                                           {this, 0, "FRAME_END_FFMPEG", [this](Message& message){ return OnFrameEnd(message); }}
+                                   });
+    }
 
     FfmpegManager::~FfmpegManager() {
         FinalizeFFmpeg();
     }
-
 
     void FfmpegManager::InitFFmpegEncoder(int width, int height, int fps) {
         std::cout << "[FFmpeg] Initializing encoder..." << std::endl;
@@ -35,23 +33,40 @@ namespace vve {
         m_codecCtx->gop_size = 10;
         m_codecCtx->max_b_frames = 1;
         m_codecCtx->pix_fmt = AV_PIX_FMT_YUV420P;
+        m_codecCtx->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
 
         if (avcodec_open2(m_codecCtx, codec, nullptr) < 0) {
             std::cerr << "[FFmpeg] Error: Could not open codec." << std::endl;
             return;
         }
 
-        std::ostringstream rawFilename;
-        rawFilename << "stream/raw_output_" << m_codecCtx->bit_rate << ".h264";
-
-        if(m_streamToUDPServer) {
-            m_udpClient = new UDPClient("::1", 12345, 30);
+        avformat_alloc_output_context2(&m_formatCtx, nullptr, "mpegts", nullptr);
+        if (!m_formatCtx) {
+            std::cerr << "[FFmpeg] Error: Could not create MPEG-TS output context." << std::endl;
+            return;
         }
-        else {
-            m_rawOutFile.open(rawFilename.str(), std::ios::binary);
-            if (!m_rawOutFile.is_open()) {
-                std::cerr << "[FFmpeg] Error: Could not open raw output file: " << rawFilename.str() << std::endl;
-            }
+
+        m_stream = avformat_new_stream(m_formatCtx, nullptr);
+        if (!m_stream) {
+            std::cerr << "[FFmpeg] Error: Failed to create stream." << std::endl;
+            return;
+        }
+
+        m_stream->time_base = m_codecCtx->time_base;
+        if (avcodec_parameters_from_context(m_stream->codecpar, m_codecCtx) < 0) {
+            std::cerr << "[FFmpeg] Error: Failed to copy codec parameters to stream." << std::endl;
+            return;
+        }
+
+        std::string url = "udp://[::1]:12345";
+        if (avio_open(&m_formatCtx->pb, url.c_str(), AVIO_FLAG_WRITE) < 0) {
+            std::cerr << "[FFmpeg] Error: Could not open UDP stream at " << url << std::endl;
+            return;
+        }
+
+        if (avformat_write_header(m_formatCtx, nullptr) < 0) {
+            std::cerr << "[FFmpeg] Error: Failed to write header." << std::endl;
+            return;
         }
 
         m_pkt = av_packet_alloc();
@@ -61,100 +76,63 @@ namespace vve {
         m_frameHeight = height;
         m_frameCounter = 0;
         m_ffmpegInitialized = true;
-        std::cout << "[FFmpeg] Encoder initialized successfully." << std::endl;
+
+        std::cout << "[FFmpeg] Encoder initialized and streaming to " << url << std::endl;
     }
 
-
     void FfmpegManager::PushFrameToFFmpeg(uint8_t *rgbaData) {
-        if (!m_ffmpegInitialized) {
-            std::cerr << "[FFmpeg] Warning: Encoder not initialized. Skipping frame." << std::endl;
-            return;
-        }
+        if (!m_ffmpegInitialized) return;
 
         AVFrame *rgbFrame = av_frame_alloc();
         rgbFrame->format = AV_PIX_FMT_RGBA;
         rgbFrame->width = m_frameWidth;
         rgbFrame->height = m_frameHeight;
-        av_image_fill_arrays(rgbFrame->data, rgbFrame->linesize, rgbaData, AV_PIX_FMT_RGBA, m_frameWidth, m_frameHeight,1);
+        av_image_fill_arrays(rgbFrame->data, rgbFrame->linesize, rgbaData, AV_PIX_FMT_RGBA, m_frameWidth, m_frameHeight, 1);
+
         AVFrame *yuvFrame = av_frame_alloc();
         yuvFrame->format = AV_PIX_FMT_YUV420P;
         yuvFrame->width = m_frameWidth;
         yuvFrame->height = m_frameHeight;
         av_image_alloc(yuvFrame->data, yuvFrame->linesize, m_frameWidth, m_frameHeight, AV_PIX_FMT_YUV420P, 32);
         yuvFrame->pts = m_frameCounter++;
+
         sws_scale(m_swsCtx, rgbFrame->data, rgbFrame->linesize, 0, m_frameHeight, yuvFrame->data, yuvFrame->linesize);
 
         if (avcodec_send_frame(m_codecCtx, yuvFrame) >= 0) {
             while (avcodec_receive_packet(m_codecCtx, m_pkt) == 0) {
-                if(m_streamToUDPServer){
-                    //std::cout << "[UDP_Package] Width: " << m_frameWidth << " Height> " << m_frameHeight << "Package Size is: " << m_pkt->size << std::endl;
-                    m_udpClient->sendFrame(m_pkt->data, m_pkt->size);
-                } else if (m_rawOutFile.is_open()) {
-                    m_rawOutFile.write(reinterpret_cast<const char *>(m_pkt->data), m_pkt->size);
-                }
+                m_pkt->stream_index = m_stream->index;
+                av_interleaved_write_frame(m_formatCtx, m_pkt);
                 av_packet_unref(m_pkt);
-                if (!m_pkt) {
-                    std::cerr << "[FFmpeg] Warning: packet became nullptr after unref!" << std::endl;
-                    break;  // Do not continue to free or use it
-                }
-
             }
         }
+
         av_freep(&yuvFrame->data[0]);
         av_frame_free(&yuvFrame);
         av_frame_free(&rgbFrame);
     }
 
-
     void FfmpegManager::FinalizeFFmpeg() {
-        if (!m_ffmpegInitialized) {
-            std::cout << "[FFmpeg] Not initialized, skipping finalization." << std::endl;
-            return;
+        if (!m_ffmpegInitialized) return;
+
+        avcodec_send_frame(m_codecCtx, nullptr);
+        while (avcodec_receive_packet(m_codecCtx, m_pkt) == 0) {
+            m_pkt->stream_index = m_stream->index;
+            av_interleaved_write_frame(m_formatCtx, m_pkt);
+            av_packet_unref(m_pkt);
         }
 
-        if (m_codecCtx) {
-            int ret = avcodec_send_frame(m_codecCtx, nullptr);
-            if (ret < 0) {
-            } else if (m_pkt) {
-                while (true) {
-                    ret = avcodec_receive_packet(m_codecCtx, m_pkt);
-                    if (ret == 0) {
-                        if (m_rawOutFile.is_open()) {
-                            m_rawOutFile.write(reinterpret_cast<const char*>(m_pkt->data), m_pkt->size);
-                        }
-                        av_packet_unref(m_pkt);
-                    } else if (ret == AVERROR_EOF || ret == AVERROR(EAGAIN)) {
-                        break;
-                    } else {
-                        std::cerr << "[FFmpeg] Error receiving packet: " << ret << std::endl;
-                        break;
-                    }
-                }
-            } else {
-                std::cerr << "[FFmpeg] ERROR: m_pkt is nullptr! Cannot receive packets." << std::endl;
-            }
-        } else {
-            std::cerr << "[FFmpeg] ERROR: m_codecCtx is nullptr! Cannot flush encoder." << std::endl;
-        }
+        av_write_trailer(m_formatCtx);
 
-        if (m_rawOutFile.is_open()) {
-            m_rawOutFile.close();
+        if (m_pkt) av_packet_free(&m_pkt);
+        if (m_codecCtx) avcodec_free_context(&m_codecCtx);
+        if (m_formatCtx) {
+            if (m_formatCtx->pb) avio_close(m_formatCtx->pb);
+            avformat_free_context(m_formatCtx);
         }
-        if (m_pkt) {
-            av_packet_free(&m_pkt);
-            m_pkt = nullptr;
-        }
-        if (m_codecCtx) {
-            avcodec_free_context(&m_codecCtx);
-        }
-        if (m_swsCtx) {
-            sws_freeContext(m_swsCtx);
-            m_swsCtx = nullptr;
-        }
+        if (m_swsCtx) sws_freeContext(m_swsCtx);
+
         m_ffmpegInitialized = false;
     }
-
-
 
     bool FfmpegManager::OnFrameEnd(Message message) {
         if (m_enableStreaming) {
@@ -175,7 +153,7 @@ namespace vve {
             );
 
             if (!m_ffmpegInitialized) {
-               InitFFmpegEncoder(extent.width, extent.height, 30);
+                InitFFmpegEncoder(extent.width, extent.height, 30);
             }
 
             PushFrameToFFmpeg(dataImage);
@@ -183,7 +161,7 @@ namespace vve {
         }
 
         return false;
-    };
+    }
 
-};
+} // namespace vve
 
