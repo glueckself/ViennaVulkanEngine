@@ -3,10 +3,10 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
 
 #include "VEInclude.h"
 #include "VESystem.h"
-#include "UDPClient.h"
 
 extern "C" {
 #include <libavcodec/avcodec.h>
@@ -17,36 +17,56 @@ extern "C" {
 }
 
 namespace vve {
+
     class FfmpegManager : public System {
-        public:
-            FfmpegManager(std::string systemName, Engine& engine, std::string windowName);
-            ~FfmpegManager();
+    public:
+        FfmpegManager(std::string systemName, Engine& engine, std::string windowName);
+        ~FfmpegManager();
 
-        private:
+    private:
+        // --- Frame hook callback ---
+        bool OnFrameEnd(Message message);
 
-            bool OnFrameEnd(Message message);
-            void FinalizeFFmpeg();
-            void InitFFmpegEncoder(int width, int height, int fps);
-            void PushFrameToFFmpeg(uint8_t *rgbaData);
+        // --- Encoder Initialization ---
+        void InitFFmpegEncoder(int width, int height, int fps);
+        bool CreateCodecContext(int width, int height, int fps);
+        bool CreateOutputContext();
+        bool CreateStream();
+        bool OpenOutputStream();
+        bool WriteStreamHeader();
+        void InitializeConversionContext(int width, int height);
 
-            std::string m_windowName;
-            bool m_enableStreaming{ true };
-            bool m_streamToUDPServer{ true };
-
-            // FFmpeg state
-            AVCodecContext *m_codecCtx = nullptr;
-            SwsContext *m_swsCtx = nullptr;
-            AVPacket *m_pkt = nullptr;
-            std::ofstream m_rawOutFile;
-            int m_frameCounter = 0;
-            int m_frameWidth = 0;
-            int m_frameHeight = 0;
-            bool m_ffmpegInitialized = false;
-
-            // UDPClient
-            AVFormatContext* m_formatCtx = nullptr;
-            AVStream* m_stream = nullptr;
+        // --- Frame Handling ---
+        void SendImageToUDP(uint8_t* rgbaData);
+        AVFrame* CreateRGBFrame(uint8_t* data);
+        AVFrame* CreateYUVFrame();
+        void ConvertRGBToYUV(AVFrame* rgb, AVFrame* yuv);
+        void EncodeAndWriteFrame(AVFrame* frame);
 
 
-        };
-};
+        // --- Cleanup ---
+        void FinalizeFFmpeg();
+
+    private:
+        std::string m_windowName;
+        bool m_enableStreaming { true };
+        bool m_streamToUDPServer { true };
+
+        // FFmpeg state
+        AVCodecContext* m_codecCtx = nullptr;
+        SwsContext* m_swsCtx = nullptr;
+        AVPacket* m_pkt = nullptr;
+        AVFormatContext* m_formatCtx = nullptr;
+        AVStream* m_stream = nullptr;
+
+        int m_frameCounter = 0;
+        int m_frameWidth = 0;
+        int m_frameHeight = 0;
+        bool m_ffmpegInitialized = false;
+
+        // Sender
+        const std::string url = "udp://[::1]:12345";
+
+    };
+
+} // namespace vve

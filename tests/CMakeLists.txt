@@ -1,8 +1,7 @@
 set(TARGET testvve)
 set(SOURCE testvve.cpp
         ../include/VEFfmpegManager.h
-        ../src/UDPClient.cpp
-        ../include/UDPClient.h)
+)
 
 
 

@@ -11,7 +11,6 @@ set(SOURCE
   VEEngine.cpp
   VEGUI.cpp
   VEFfmpegManager.cpp
-  UDPClient.cpp
   VERenderer.cpp
   VERendererForward.cpp
   VERendererForward11.cpp
@@ -31,7 +30,6 @@ set(SOURCE
   VHRender.cpp
   VHCommand.cpp
   VHSync.cpp
-  UDPClient.cpp
 )
 
 set(HEADERS
@@ -51,7 +49,6 @@ set(HEADERS
   ${INCLUDE}/VEWindow.h
   ${INCLUDE}/VEWindowSDL.h
   ${INCLUDE}/VEFfmpegManager.h
-  ${INCLUDE}/UDPClient.h
   ${INCLUDE}/VHInclude.h
   ${INCLUDE}/VHBuffer.h
   ${INCLUDE}/VHImage.h
