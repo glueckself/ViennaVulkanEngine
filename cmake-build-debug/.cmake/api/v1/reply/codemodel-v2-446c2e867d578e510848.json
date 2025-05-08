@@ -1,0 +1,823 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5,
+						6,
+						9,
+						11,
+						12,
+						13,
+						17
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"build" : "_deps/viennaentitycomponentsystem-build",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-_deps.viennaentitycomponentsystem-build-Debug-a65cf156acd9a42cce91.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "cmake-build-debug/_deps/viennaentitycomponentsystem-src",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27
+					]
+				},
+				{
+					"build" : "_deps/viennastrongtype-build",
+					"jsonFile" : "directory-_deps.viennastrongtype-build-Debug-9e83ca7e0f9ff3b75b93.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/viennastrongtype-src"
+				},
+				{
+					"build" : "_deps/viennatypelistlibrary-build",
+					"jsonFile" : "directory-_deps.viennatypelistlibrary-build-Debug-9d115d11643e57dc0878.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "cmake-build-debug/_deps/viennatypelistlibrary-src"
+				},
+				{
+					"build" : "_deps/viennaentitycomponentsystem-build/tests",
+					"jsonFile" : "directory-_deps.viennaentitycomponentsystem-build.tests-Debug-28df3f786a0b5ab53aac.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "cmake-build-debug/_deps/viennaentitycomponentsystem-src/tests",
+					"targetIndexes" : 
+					[
+						39
+					]
+				},
+				{
+					"build" : "_deps/sdl2-build",
+					"jsonFile" : "directory-_deps.sdl2-build-Debug-e842b0519bd60c12d7ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/sdl2-src",
+					"targetIndexes" : 
+					[
+						28,
+						29,
+						30,
+						31,
+						38,
+						41
+					]
+				},
+				{
+					"build" : "_deps/assimp-build",
+					"childIndexes" : 
+					[
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.assimp-build-Debug-f35d82e9f27cb072dafd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "cmake-build-debug/_deps/assimp-src"
+				},
+				{
+					"build" : "_deps/assimp-build/contrib/zlib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.assimp-build.contrib.zlib-Debug-02db1f5c8cb36b938b15.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 6,
+					"source" : "cmake-build-debug/_deps/assimp-src/contrib/zlib",
+					"targetIndexes" : 
+					[
+						44
+					]
+				},
+				{
+					"build" : "_deps/assimp-build/code",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.assimp-build.code-Debug-325f0745081d9c73dd09.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 5,
+					"source" : "cmake-build-debug/_deps/assimp-src/code",
+					"targetIndexes" : 
+					[
+						32
+					]
+				},
+				{
+					"build" : "_deps/glm-build",
+					"childIndexes" : 
+					[
+						10
+					],
+					"jsonFile" : "directory-_deps.glm-build-Debug-3ab0f2b8ca6d44de8bbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "cmake-build-debug/_deps/glm-src"
+				},
+				{
+					"build" : "_deps/glm-build/glm",
+					"jsonFile" : "directory-_deps.glm-build.glm-Debug-afa33c3e425f714e5927.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 7,
+					"source" : "cmake-build-debug/_deps/glm-src/glm",
+					"targetIndexes" : 
+					[
+						35
+					]
+				},
+				{
+					"build" : "_deps/vkbootstrap-build",
+					"jsonFile" : "directory-_deps.vkbootstrap-build-Debug-72f4576d7c86ddead59f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "cmake-build-debug/_deps/vkbootstrap-src",
+					"targetIndexes" : 
+					[
+						43
+					]
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						42
+					]
+				},
+				{
+					"build" : "examples",
+					"childIndexes" : 
+					[
+						14,
+						15,
+						16
+					],
+					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples"
+				},
+				{
+					"build" : "examples/helper",
+					"jsonFile" : "directory-examples.helper-Debug-33a33812bfac8a86bf81.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "examples/helper",
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"build" : "examples/game",
+					"jsonFile" : "directory-examples.game-Debug-fe26c061b2bf870622e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "examples/game",
+					"targetIndexes" : 
+					[
+						34
+					]
+				},
+				{
+					"build" : "examples/muegame",
+					"jsonFile" : "directory-examples.muegame-Debug-f5a8cadce8b1edee43fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "examples/muegame",
+					"targetIndexes" : 
+					[
+						37
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						40
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						4,
+						5,
+						7,
+						8
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					],
+					"name" : "ViennaVulkanEngine",
+					"targetIndexes" : 
+					[
+						33,
+						34,
+						36,
+						37,
+						40,
+						42
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						4
+					],
+					"name" : "ViennaEntityComponentSystem",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						39
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ViennaStrongType",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "ViennaTypeListLibrary",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "SDL2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						28,
+						29,
+						30,
+						31,
+						38,
+						41
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						6
+					],
+					"directoryIndexes" : 
+					[
+						6,
+						8
+					],
+					"name" : "Assimp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						32
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "zlib",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						44
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9,
+						10
+					],
+					"name" : "glm",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						35
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "VulkanBootstrap",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						43
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Continuous::@23bb862133346fe85f60",
+					"jsonFile" : "target-Continuous-Debug-6020c3dd0d9bd59afd42.json",
+					"name" : "Continuous",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousBuild::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousBuild-Debug-d17183c4d6029d668527.json",
+					"name" : "ContinuousBuild",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousConfigure::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousConfigure-Debug-9daeb20b40ff6a4fb4be.json",
+					"name" : "ContinuousConfigure",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousCoverage::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousCoverage-Debug-48f4d4a29fbb31605101.json",
+					"name" : "ContinuousCoverage",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousMemCheck::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousMemCheck-Debug-8556e2f0098e03830eb4.json",
+					"name" : "ContinuousMemCheck",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousStart::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousStart-Debug-be3e6f1da2945706d23c.json",
+					"name" : "ContinuousStart",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousSubmit::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousSubmit-Debug-1da818ea56b4de8305d9.json",
+					"name" : "ContinuousSubmit",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousTest::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousTest-Debug-6b943d3a1c0d33407d74.json",
+					"name" : "ContinuousTest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ContinuousUpdate::@23bb862133346fe85f60",
+					"jsonFile" : "target-ContinuousUpdate-Debug-25d50bf41e41b3c5e7e2.json",
+					"name" : "ContinuousUpdate",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Experimental::@23bb862133346fe85f60",
+					"jsonFile" : "target-Experimental-Debug-d905b256baddf966afd1.json",
+					"name" : "Experimental",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalBuild::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalBuild-Debug-e1497d7fc2abeb009bac.json",
+					"name" : "ExperimentalBuild",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalConfigure::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalConfigure-Debug-7d5b32ecd8abaa892c44.json",
+					"name" : "ExperimentalConfigure",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalCoverage::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalCoverage-Debug-6e776f5a26d7e1f492cc.json",
+					"name" : "ExperimentalCoverage",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalMemCheck::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalMemCheck-Debug-0d97533278492938776e.json",
+					"name" : "ExperimentalMemCheck",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalStart::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalStart-Debug-39d65536d6b2944de81b.json",
+					"name" : "ExperimentalStart",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalSubmit::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalSubmit-Debug-947ebf499212febb3a61.json",
+					"name" : "ExperimentalSubmit",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalTest::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalTest-Debug-b6780055f52a29bd8c7e.json",
+					"name" : "ExperimentalTest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ExperimentalUpdate::@23bb862133346fe85f60",
+					"jsonFile" : "target-ExperimentalUpdate-Debug-5f95240639e521eb6e2e.json",
+					"name" : "ExperimentalUpdate",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Nightly::@23bb862133346fe85f60",
+					"jsonFile" : "target-Nightly-Debug-2352a387d0610bdbaf14.json",
+					"name" : "Nightly",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyBuild::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyBuild-Debug-53f67e26baad1ae577e7.json",
+					"name" : "NightlyBuild",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyConfigure::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyConfigure-Debug-706f9bc164ec6c1dec1d.json",
+					"name" : "NightlyConfigure",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyCoverage::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyCoverage-Debug-a1dad70bd53adeeee680.json",
+					"name" : "NightlyCoverage",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyMemCheck::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyMemCheck-Debug-187f0dd0c0ea578ae711.json",
+					"name" : "NightlyMemCheck",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyMemoryCheck::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyMemoryCheck-Debug-65245f24340ef367c585.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyStart::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyStart-Debug-72bc9f45fcbd8fe9d23d.json",
+					"name" : "NightlyStart",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlySubmit::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlySubmit-Debug-0f34089c0de5e01b3587.json",
+					"name" : "NightlySubmit",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyTest::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyTest-Debug-38b1f7de96f5c0fc68b3.json",
+					"name" : "NightlyTest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NightlyUpdate::@23bb862133346fe85f60",
+					"jsonFile" : "target-NightlyUpdate-Debug-ff30eb77a13263d4471b.json",
+					"name" : "NightlyUpdate",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SDL2::@45bd952f1071c035638d",
+					"jsonFile" : "target-SDL2-Debug-6cb43a0e0c9d00d3d070.json",
+					"name" : "SDL2",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SDL2-static::@45bd952f1071c035638d",
+					"jsonFile" : "target-SDL2-static-Debug-5464ebafa8550b137482.json",
+					"name" : "SDL2-static",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SDL2_test::@45bd952f1071c035638d",
+					"jsonFile" : "target-SDL2_test-Debug-afb814b1e2b96d7ff693.json",
+					"name" : "SDL2_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SDL2main::@45bd952f1071c035638d",
+					"jsonFile" : "target-SDL2main-Debug-d48ec63358c60944d383.json",
+					"name" : "SDL2main",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "assimp::@b1ea6f5c2178ebc90389",
+					"jsonFile" : "target-assimp-Debug-d68e3153790434c650bb.json",
+					"name" : "assimp",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "docs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-docs-Debug-7973d7a00a995f693f94.json",
+					"name" : "docs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "game::@c25f4c7b7d87a887bbce",
+					"jsonFile" : "target-game-Debug-88d55f81a0b92c1480bc.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "glm::@ce54d98d7b326a3e12a8",
+					"jsonFile" : "target-glm-Debug-ca93008a0205529b70e0.json",
+					"name" : "glm",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "helper::@98754d11e0974747d46a",
+					"jsonFile" : "target-helper-Debug-60c6bacf49c4660edae8.json",
+					"name" : "helper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "muegame::@402c1a0e0ac2212a2b06",
+					"jsonFile" : "target-muegame-Debug-19d99abdb172155130d3.json",
+					"name" : "muegame",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "sdl_headers_copy::@45bd952f1071c035638d",
+					"jsonFile" : "target-sdl_headers_copy-Debug-6db3bc347b0ecef4b567.json",
+					"name" : "sdl_headers_copy",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "testvecs::@d6bac87f38bd302b6b0d",
+					"jsonFile" : "target-testvecs-Debug-2559ba3a4a16bedddf46.json",
+					"name" : "testvecs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "testvve::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-testvve-Debug-afc205fe0481ab6d1b10.json",
+					"name" : "testvve",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "uninstall::@45bd952f1071c035638d",
+					"jsonFile" : "target-uninstall-Debug-5b622295971a36851ea3.json",
+					"name" : "uninstall",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "viennavulkanengine::@145eef247bfb46b6828c",
+					"jsonFile" : "target-viennavulkanengine-Debug-9eb20b6adda8f9dea527.json",
+					"name" : "viennavulkanengine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "vk-bootstrap::@74233fd7f31b35e18d8e",
+					"jsonFile" : "target-vk-bootstrap-Debug-74f99978ca412b6dd99a.json",
+					"name" : "vk-bootstrap",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "zlibstatic::@7fd99959cf8fe87d223a",
+					"jsonFile" : "target-zlibstatic-Debug-e80ab193559e886d632e.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 6
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug",
+		"source" : "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
