@@ -32,7 +32,7 @@ rule CXX_SCAN__testvecs_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__testvecs_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=_deps/viennaentitycomponentsystem-build/tests/CMakeFiles/testvecs.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=_deps/viennaentitycomponentsystem-build/tests/CMakeFiles/testvecs.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -84,7 +84,7 @@ rule C_COMPILER__SDL2main_unscanned_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__SDL2main_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -114,7 +114,7 @@ rule C_SHARED_LIBRARY_LINKER__SDL2_Debug
 # Rule for creating library symlink.
 
 rule CMAKE_SYMLINK_LIBRARY
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_symlink_library $in $SONAME $out && $POST_BUILD
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_symlink_library $in $SONAME $out && $POST_BUILD
   description = Creating library symlink $out
 
 
@@ -132,7 +132,7 @@ rule C_COMPILER__SDL2-static_unscanned_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__SDL2-static_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -151,7 +151,7 @@ rule C_COMPILER__SDL2_test_unscanned_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__SDL2_test_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -170,7 +170,7 @@ rule C_COMPILER__zlibstatic_unscanned_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__zlibstatic_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -199,7 +199,7 @@ rule CXX_COMPILER__assimp_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__assimp_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -217,7 +217,7 @@ rule CXX_SCAN__glm_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__glm_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=_deps/glm-build/glm/CMakeFiles/glm.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=_deps/glm-build/glm/CMakeFiles/glm.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -248,7 +248,7 @@ rule CXX_COMPILER__glm_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__glm_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -266,7 +266,7 @@ rule CXX_SCAN__vk-bootstrap_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__vk-bootstrap_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=_deps/vkbootstrap-build/CMakeFiles/vk-bootstrap.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=_deps/vkbootstrap-build/CMakeFiles/vk-bootstrap.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -297,7 +297,7 @@ rule CXX_COMPILER__vk-bootstrap_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__vk-bootstrap_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -315,7 +315,7 @@ rule CXX_SCAN__viennavulkanengine_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__viennavulkanengine_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=src/CMakeFiles/viennavulkanengine.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=src/CMakeFiles/viennavulkanengine.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -346,7 +346,7 @@ rule CXX_COMPILER__viennavulkanengine_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__viennavulkanengine_Debug
-  command = $PRE_LINK && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -364,7 +364,7 @@ rule CXX_SCAN__helper_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__helper_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=examples/helper/CMakeFiles/helper.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=examples/helper/CMakeFiles/helper.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -415,7 +415,7 @@ rule CXX_SCAN__game_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__game_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=examples/game/CMakeFiles/game.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=examples/game/CMakeFiles/game.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -466,7 +466,7 @@ rule CXX_SCAN__muegame_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__muegame_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=examples/muegame/CMakeFiles/muegame.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=examples/muegame/CMakeFiles/muegame.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -517,7 +517,7 @@ rule CXX_SCAN__testvve_Debug
 # Rule to generate ninja dyndep files for CXX.
 
 rule CXX_DYNDEP__testvve_Debug
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=tests/CMakeFiles/testvve.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E cmake_ninja_dyndep --tdi=tests/CMakeFiles/testvve.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -559,7 +559,7 @@ rule CXX_EXECUTABLE_LINKER__testvve_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine -B/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine -B/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -568,7 +568,7 @@ rule RERUN_CMAKE
 # Rule for cleaning additional files.
 
 rule CLEAN_ADDITIONAL
-  command = /snap/clion/338/bin/cmake/linux/x64/bin/cmake -DCONFIG=$CONFIG -P CMakeFiles/clean_additional.cmake
+  command = /snap/clion/341/bin/cmake/linux/x64/bin/cmake -DCONFIG=$CONFIG -P CMakeFiles/clean_additional.cmake
   description = Cleaning additional files...
 
 
@@ -576,7 +576,7 @@ rule CLEAN_ADDITIONAL
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /snap/clion/338/bin/ninja/linux/x64/ninja $FILE_ARG -t clean $TARGETS
+  command = /snap/clion/341/bin/ninja/linux/x64/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -584,6 +584,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /snap/clion/338/bin/ninja/linux/x64/ninja -t targets
+  command = /snap/clion/341/bin/ninja/linux/x64/ninja -t targets
   description = All primary targets available:
 

@@ -27,8 +27,8 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/snap/clion/338/bin/cmake/linux/x64/bin/cmake" "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine"
-MakeCommand: /snap/clion/338/bin/cmake/linux/x64/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/snap/clion/341/bin/cmake/linux/x64/bin/cmake" "/home/milli/Uni/Cloud_Gaming/ViennaVulkanEngine"
+MakeCommand: /snap/clion/341/bin/cmake/linux/x64/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
